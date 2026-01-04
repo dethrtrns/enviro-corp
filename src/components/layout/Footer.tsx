@@ -93,14 +93,14 @@ export function Footer() {
         <div>
           <h3 className="font-semibold text-white mb-4">India (Head Office)</h3>
           <ul className="space-y-2 text-sm text-slate-400">
-            <li>House No.52, Gomti River View, Corporate House,</li>
-            <li>Opp. Riverfront, Lucknow,</li>
-            <li>India – 226010</li>
+            <li>123 Innovation Drive, Tech Park,</li>
+            <li>Metropolis, State,</li>
+            <li>India – 123456</li>
             <li className="pt-2 text-blue-400 hover:text-blue-300">
-              <a href="tel:+918866660025">+91-8866660025</a>
+              <a href="tel:+155501234567">+1-555-0123-4567</a>
             </li>
             <li className="text-blue-400 hover:text-blue-300">
-              <a href="mailto:connect@envirolko.com">connect@envirolko.com</a>
+              <a href="mailto:info@envirolko-placeholder.com">info@envirolko-placeholder.com</a>
             </li>
           </ul>
         </div>
@@ -110,9 +110,9 @@ export function Footer() {
           <h3 className="font-semibold text-white mb-4">United Kingdom</h3>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>EnviroLko Pvt Ltd</li>
-            <li>2310 winchester Avenue</li>
-            <li>Suite G, #4217 Bahamas, MX 85403</li>
-            <li>United Kingdom</li>
+            <li>456 Global Avenue</li>
+            <li>Business District, London</li>
+            <li>United Kingdom - SW1A 1AA</li>
           </ul>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-slate-900/80"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in-up">
           <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-900/20 px-3 py-1 text-sm text-blue-300 backdrop-blur-xl mb-6">
             <span className="flex h-2 w-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
             New: Pollusense Portable Monitor
@@ -221,7 +221,7 @@ export default function Home() {
 // Components
 function ProductCard({ name, description, features, tag, image }: { name: string, description: string, features: string[], tag?: string, image: string }) {
     return (
-        <div className="flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-all hover:shadow-lg">
+        <div className="flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm hover-scale">
             <div className="h-56 bg-slate-100 flex items-center justify-center relative overflow-hidden">
                 {tag && <span className="absolute top-4 right-4 bg-slate-900/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full z-10">{tag}</span>}
                 <img src={image} alt={name} className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
@@ -246,7 +246,7 @@ function ProductCard({ name, description, features, tag, image }: { name: string
 
 function SectorCard({ icon, title, description, color }: { icon: React.ReactNode, title: string, description: string, color: string }) {
     return (
-        <Link href={`/sectors/${title.split(' ')[0].toLowerCase()}`} className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-blue-200 flex flex-col items-center text-center">
+        <Link href={`/sectors/${title.split(' ')[0].toLowerCase()}`} className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover-scale hover:border-blue-200 flex flex-col items-center text-center">
             <div className={`mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full ${color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 {icon}
             </div>

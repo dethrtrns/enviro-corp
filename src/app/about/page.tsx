@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="bg-white pb-16">
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About EnviroLko</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             We are an environmental IoT company with a mission to make air quality monitoring accurate, affordable, and accessible.
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-slate-900">Why the world trusts EnviroLko</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
                     <div className="text-blue-600 mb-4 flex justify-center">
                         <CheckCircle2 size={40} />
                     </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
                         Our "e-breathing" technology ensures sensor longevity and high data accuracy even in extreme weather conditions.
                     </p>
                 </div>
-                <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
                     <div className="text-blue-600 mb-4 flex justify-center">
                         <CheckCircle2 size={40} />
                     </div>
@@ -60,7 +60,7 @@ export default function AboutPage() {
                         From a single device to a city-wide network of 500+ monitors, our infrastructure scales effortlessly.
                     </p>
                 </div>
-                <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
                     <div className="text-blue-600 mb-4 flex justify-center">
                         <CheckCircle2 size={40} />
                     </div>

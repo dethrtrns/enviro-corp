@@ -44,7 +44,7 @@ export default function SectorsPage() {
     <div className="bg-white pb-16">
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries & Sectors</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Tailored air quality monitoring solutions for diverse environments and applications.
@@ -56,7 +56,7 @@ export default function SectorsPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid gap-12">
           {sectors.map((sector, index) => (
-            <div key={sector.id} id={sector.id} className="group rounded-2xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm hover:shadow-lg transition-all hover:border-blue-200">
+            <div key={sector.id} id={sector.id} className="group rounded-2xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm hover-scale hover:border-blue-200">
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="shrink-0 p-4 bg-slate-50 rounded-xl group-hover:bg-blue-50 transition-colors">
                   {sector.icon}

@@ -63,9 +63,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">India (Head Office)</h3>
                     <p className="text-slate-300 leading-relaxed">
-                      House No.2, Garden View, Corporate House,<br/>
-                      Opp. Bodakdev Auda Garden, Ahmedabad,<br/>
-                      India – 380054
+                      123 Innovation Drive, Tech Park,<br/>
+                      Metropolis, State,<br/>
+                      India – 123456
                     </p>
                   </div>
                 </div>
@@ -76,8 +76,8 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-lg mb-1">United States</h3>
                     <p className="text-slate-300 leading-relaxed">
                       EnviroLko Instruments Pvt Ltd<br/>
-                      2310 North Henderson Ave, Suite B, #1047<br/>
-                      Dallas, TX 75206
+                      789 Enterprise Blvd, Suite 100<br/>
+                      Tech City, CA 90210
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Call Us</h3>
                     <p className="text-slate-300">
-                      <a href="tel:+918866660025" className="hover:text-white transition-colors">+91-8866660025</a>
+                      <a href="tel:+155501234567" className="hover:text-white transition-colors">+1-555-0123-4567</a>
                     </p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email</h3>
                     <p className="text-slate-300">
-                      <a href="mailto:connect@envirolko.com" className="hover:text-white transition-colors">connect@envirolko.com</a>
+                      <a href="mailto:info@envirolko-placeholder.com" className="hover:text-white transition-colors">info@envirolko-placeholder.com</a>
                     </p>
                   </div>
                 </div>

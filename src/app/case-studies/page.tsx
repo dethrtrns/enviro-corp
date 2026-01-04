@@ -59,7 +59,7 @@ export default function CaseStudiesPage() {
     <div className="bg-white pb-16">
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Case Studies</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Discover how industries and smart cities worldwide are using EnviroLko to monitor and improve air quality.
@@ -71,7 +71,7 @@ export default function CaseStudiesPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-                <div key={index} className="flex flex-col border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow bg-white">
+                <div key={index} className="flex flex-col border border-slate-200 rounded-xl overflow-hidden hover-scale bg-white">
                     <div className="h-48 overflow-hidden relative">
                         <img src={study.image} alt={study.title} className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
                         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-xs font-bold rounded-full text-slate-800 uppercase tracking-wide">

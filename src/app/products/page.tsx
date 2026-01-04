@@ -65,7 +65,7 @@ export default function ProductsPage() {
     <div className="bg-white pb-16">
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Comprehensive range of environmental monitoring solutions for every need.
@@ -79,7 +79,7 @@ export default function ProductsPage() {
           {products.map((product, index) => (
             <div key={product.id} id={product.id} className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
               <div className="w-full md:w-1/2">
-                <div className="bg-slate-100 rounded-2xl p-8 flex items-center justify-center h-[400px] shadow-inner">
+                <div className="bg-slate-100 rounded-2xl p-8 flex items-center justify-center h-[400px] shadow-inner hover-scale">
                   <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
