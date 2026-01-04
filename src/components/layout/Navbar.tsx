@@ -18,41 +18,56 @@ import { Menu, X } from "lucide-react";
 const products: { title: string; href: string; description: string }[] = [
   {
     title: "Polludrone",
-    href: "#products",
-    description: "Low-cost ambient air quality monitoring system for smart cities.",
+    href: "/products#polludrone",
+    description: "Ambient Air Quality Monitoring System for smart cities and airports.",
   },
   {
     title: "Pollusense",
-    href: "#products",
-    description: "Portable air quality monitor for hot-spot monitoring and surveys.",
+    href: "/products#pollusense",
+    description: "Portable Air Quality Monitoring System for mobile surveys.",
   },
   {
     title: "Odosense",
-    href: "#products",
-    description: "Real-time odour emission tracking for landfills and wastewater.",
+    href: "/products#odosense",
+    description: "Odour Monitoring System for landfills and treatment plants.",
   },
   {
     title: "Dustroid",
-    href: "#products",
-    description: "Automated dust monitoring system for construction and mining.",
+    href: "/products#dustroid",
+    description: "Real-time Dust Monitoring System for construction and mining.",
+  },
+  {
+    title: "AQBot",
+    href: "/products#aqbot",
+    description: "Industrial Air Quality Monitor for automation and compliance.",
+  },
+  {
+    title: "Weathercom",
+    href: "/products#weathercom",
+    description: "Automatic Weather Station for meteorological parameters.",
   },
 ];
 
 const sectors: { title: string; href: string; description: string }[] = [
   {
     title: "Urban Air Quality",
-    href: "#sectors",
-    description: "Data-driven insights for safer breathing conditions in cities.",
+    href: "/sectors/urban",
+    description: "Monitoring solutions for smart cities and campuses.",
   },
   {
     title: "Odour Monitoring",
-    href: "#sectors",
-    description: "Real-time odour nuisance monitoring and complaint management.",
+    href: "/sectors/odour",
+    description: "Solutions for managing odour complaints and compliance.",
   },
   {
     title: "Industrial",
-    href: "#sectors",
-    description: "EHS compliance and safety monitoring for manufacturing plants.",
+    href: "/sectors/industrial",
+    description: "EHS compliance and process optimization for industries.",
+  },
+  {
+    title: "Research",
+    href: "/sectors/research",
+    description: "High-accuracy data for environmental research projects.",
   },
 ];
 
@@ -63,14 +78,14 @@ export function Navbar() {
     <div className="border-b bg-white sticky top-0 z-50">
       <div className="flex h-16 items-center px-4 container mx-auto justify-between">
         <Link href="/" className="font-bold text-2xl tracking-tight text-slate-900 flex items-center gap-2">
-           <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center text-white">
-             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+           {/* EnviroLko Logo Placeholder - In a real app, use the SVG or Image component */}
+           <div className="flex items-center justify-center">
+             <span className="text-blue-600 font-extrabold text-3xl">ENVIROLKO</span>
            </div>
-           EnviroCorp
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
             <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
@@ -106,9 +121,16 @@ export function Navbar() {
                 </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                <Link href="#about" legacyBehavior passHref>
+                <Link href="/case-studies" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    About Us
+                    Case Studies
+                    </NavigationMenuLink>
+                </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                <Link href="/resources" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Resources
                     </NavigationMenuLink>
                 </Link>
                 </NavigationMenuItem>
@@ -116,29 +138,42 @@ export function Navbar() {
             </NavigationMenu>
         </div>
 
-        <div className="hidden md:flex gap-4">
-             <Link href="#contact" className="inline-flex h-10 items-center justify-center rounded-md bg-slate-900 px-8 text-sm font-medium text-slate-50 shadow transition-colors hover:bg-slate-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 disabled:pointer-events-none disabled:opacity-50">
-                Contact
+        <div className="hidden lg:flex gap-4">
+             <Link href="/contact" className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50">
+                Get In Touch
              </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-          <div className="md:hidden p-4 bg-white border-t">
-              <nav className="flex flex-col gap-4">
-                  <span className="font-semibold text-sm text-slate-500 uppercase tracking-wider">Products</span>
-                  {products.map(p => <Link key={p.title} href={p.href} className="pl-4 text-slate-900" onClick={() => setIsOpen(false)}>{p.title}</Link>)}
-                  <span className="font-semibold text-sm text-slate-500 uppercase tracking-wider mt-2">Sectors</span>
-                  {sectors.map(s => <Link key={s.title} href={s.href} className="pl-4 text-slate-900" onClick={() => setIsOpen(false)}>{s.title}</Link>)}
+          <div className="lg:hidden p-4 bg-white border-t h-screen overflow-y-auto pb-20">
+              <nav className="flex flex-col gap-6">
+                  <div>
+                    <span className="font-semibold text-sm text-slate-500 uppercase tracking-wider block mb-2">Products</span>
+                    <div className="flex flex-col gap-2 pl-4">
+                        {products.map(p => <Link key={p.title} href={p.href} className="text-slate-900 py-1" onClick={() => setIsOpen(false)}>{p.title}</Link>)}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <span className="font-semibold text-sm text-slate-500 uppercase tracking-wider block mb-2">Sectors</span>
+                    <div className="flex flex-col gap-2 pl-4">
+                        {sectors.map(s => <Link key={s.title} href={s.href} className="text-slate-900 py-1" onClick={() => setIsOpen(false)}>{s.title}</Link>)}
+                    </div>
+                  </div>
+
+                  <Link href="/case-studies" className="font-semibold text-slate-900" onClick={() => setIsOpen(false)}>Case Studies</Link>
+                  <Link href="/resources" className="font-semibold text-slate-900" onClick={() => setIsOpen(false)}>Resources</Link>
+                  
                   <div className="h-px bg-slate-200 my-2"></div>
-                   <Link href="#contact" className="text-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-slate-50" onClick={() => setIsOpen(false)}>
-                    Contact Us
+                   <Link href="/contact" className="text-center rounded-md bg-blue-600 px-4 py-3 text-sm font-medium text-white" onClick={() => setIsOpen(false)}>
+                    Get In Touch
                    </Link>
               </nav>
           </div>

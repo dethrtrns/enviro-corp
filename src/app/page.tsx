@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BarChart3, Cloud, CloudRain, Factory, ShieldCheck, Wind } from "lucide-react";
+import { ArrowRight, BarChart3, Cloud, CloudRain, Factory, ShieldCheck, Wind, Globe, Users, Activity } from "lucide-react";
 
 export default function Home() {
   return (
@@ -8,30 +8,33 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden bg-slate-900 text-white">
         {/* Background Pattern */}
-        <div className="absolute inset-0 z-0 opacity-10">
-            <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" />
-            </svg>
+        <div className="absolute inset-0 z-0 opacity-20">
+            <img 
+              src="https://oizom.com/wp-content/uploads/2022/08/Oizom_Ambient_Air_Quality_Monitoring_Equipments.webp" 
+              alt="Background" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-slate-900/80"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/50 px-3 py-1 text-sm text-slate-300 backdrop-blur-xl mb-6">
+          <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-900/20 px-3 py-1 text-sm text-blue-300 backdrop-blur-xl mb-6">
             <span className="flex h-2 w-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-            New: Polludrone Lite Available
+            New: Pollusense Portable Monitor
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-            Low-Cost Air Quality <br className="hidden md:block"/> Monitoring Solutions
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+            Accurate & Affordable <br className="hidden md:block"/> Environmental Monitoring Solutions
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            Scalable outdoor air quality monitoring networks measuring PM2.5, PM10, CO, and CO2 with patent-pending technology.
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
+            EnviroLko offers end-to-end and scalable solutions for real-time air quality monitoring and advanced data analytics. Trusted by 30+ Smart Cities globally.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#products" className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700">
+            <Link href="/products" className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700">
               Explore Products
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
-            <Link href="#contact" className="inline-flex h-12 items-center justify-center rounded-md border border-slate-700 bg-transparent px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-700">
-              Request Demo
+            <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md border border-slate-700 bg-transparent px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-700">
+              Book a Demo
             </Link>
           </div>
         </div>
@@ -41,47 +44,21 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-slate-200 py-12">
             <div>
-                <div className="text-3xl font-bold text-slate-900">50+</div>
-                <div className="text-sm text-slate-500">Major Cities</div>
+                <div className="text-3xl font-bold text-slate-900">80+</div>
+                <div className="text-sm text-slate-500 flex items-center justify-center gap-1"><Globe size={14}/> Countries</div>
             </div>
             <div>
-                <div className="text-3xl font-bold text-slate-900">1000+</div>
+                <div className="text-3xl font-bold text-slate-900">3500+</div>
                 <div className="text-sm text-slate-500">Installations</div>
             </div>
             <div>
-                <div className="text-3xl font-bold text-slate-900">IoT</div>
-                <div className="text-sm text-slate-500">Enabled</div>
+                <div className="text-3xl font-bold text-slate-900">250M+</div>
+                <div className="text-sm text-slate-500 flex items-center justify-center gap-1"><Users size={14}/> People Monitored</div>
             </div>
             <div>
-                <div className="text-3xl font-bold text-slate-900">AI</div>
-                <div className="text-sm text-slate-500">Analytics</div>
+                <div className="text-3xl font-bold text-slate-900">30+</div>
+                <div className="text-sm text-slate-500 flex items-center justify-center gap-1"><Activity size={14}/> Parameters</div>
             </div>
-        </div>
-      </section>
-
-      {/* Solutions / Sectors */}
-      <section id="sectors" className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">Solutions by Sector</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Tackling rapid urbanization and industrial expansion with data-driven environmental insights.</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-            <Card 
-                icon={<Cloud className="h-10 w-10 text-green-600" />}
-                title="Urban Air Quality"
-                description="Ensure safe breathing conditions and empower authorities with data-driven insights for infrastructure and policy planning."
-            />
-            <Card 
-                icon={<Factory className="h-10 w-10 text-blue-600" />}
-                title="Industrial Monitoring"
-                description="Monitor dust and toxic gases to ensure compliance and worker safety in manufacturing plants and construction sites."
-            />
-            <Card 
-                icon={<ShieldCheck className="h-10 w-10 text-orange-600" />}
-                title="Odour Monitoring"
-                description="Real-time tracking of odour nuisance for landfills and wastewater treatment plants to manage complaints effectively."
-            />
         </div>
       </section>
 
@@ -90,8 +67,8 @@ export default function Home() {
          <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div className="max-w-2xl">
-                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">Our Flagship Products</h2>
-                    <p className="text-lg text-slate-600">Cost-effective, solar-powered, and retrofit designs for every environmental need.</p>
+                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">Our Product Range</h2>
+                    <p className="text-lg text-slate-600">Smart, accurate, and robust environmental monitoring systems for every application.</p>
                 </div>
                 <Link href="/products" className="hidden md:flex text-blue-600 font-medium hover:text-blue-700 items-center">
                     View All Products <ArrowRight className="ml-1 h-4 w-4" />
@@ -99,25 +76,47 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Product 1 */}
                 <ProductCard 
-                    tag="Bestseller"
+                    tag="Ambient Air"
                     name="Polludrone"
-                    description="Integrated air quality monitoring system measuring PM1, PM2.5, PM10, CO, CO2, noise, light, and UV."
-                    features={['Solar Powered', 'Retrofit Design', 'Patent Pending']}
+                    description="Integrated air monitoring system for real-time outdoor air quality monitoring for Urban and Industrial applications."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Polludrone_Ambient_Air_Quality_Monitoring_System-qtlv11q7ikvjus00869zq6hxxayefn1ml1bpaqe9oo.webp"
+                    features={['Smart Cities', 'Campuses', 'Airports']}
                 />
-                 {/* Product 2 */}
                  <ProductCard 
                     tag="Portable"
                     name="Pollusense"
-                    description="Portable air quality monitor designed for hot-spot monitoring, indoor surveys, and personal exposure studies."
-                    features={['Battery Operated', 'Data Logging', 'Compact']}
+                    description="Real-time portable air quality monitoring system designed for versatile use across industries and mobile surveys."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Pollusense-website-image2-qvxjxh9x4ci8s5d04is8jk4dlbkrfrbke4p27x3o94.jpg"
+                    features={['Hot-spot Monitoring', 'Indoor Surveys', 'EHS']}
                 />
-                 {/* Product 3 */}
                  <ProductCard 
+                    tag="Odour"
                     name="Odosense"
-                    description="E-nose technology for odour monitoring. Measures H2S, NH3, SO2, CH3SH, and TVOCs."
-                    features={['Odour Modeling', 'Real-time Alerts', 'Weather Proof']}
+                    description="Monitors various odourful and toxic gases in the environment to provide insights for odour dispersion and modelling."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Odosense-Odour-Monitoring-Equipment-qtlv0zuj4wsz7k2qj5gql6z0qj7o08u5ws0qc6h214.webp"
+                    features={['Landfills', 'WWTP', 'Paper Mills']}
+                />
+                <ProductCard 
+                    tag="Dust"
+                    name="Dustroid"
+                    description="Particulate monitoring system to measure a wide spectrum of particulate matter sizes for dust laden activities."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Oizom_Dustroid_Ambient_Dust_Monitor-qtlv13lvw8y4hzx9x738v60v42p4v1939amo9abhc8.webp"
+                    features={['Construction', 'Mining', 'Quarries']}
+                />
+                <ProductCard 
+                    tag="Industrial"
+                    name="AQBot"
+                    description="Industrial air quality monitor designed to serve multiple applications with a wide range of gas parameters."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Indoor-use-case-AQBot-scaled-2-qtlv0ywoy2rovy43on240p7k55casjqfknd8uwig7c.webp"
+                    features={['Process Control', 'Leak Detection', 'Safety']}
+                />
+                <ProductCard 
+                    tag="Software"
+                    name="Envizom"
+                    description="Cloud-based air quality monitoring software to visualize, analyze, and act on air quality data from anywhere."
+                    image="https://oizom.com/wp-content/uploads/elementor/thumbs/Envizom_Air-Quality-Software_Banner-2-qtlv13lvw8y4hzx9x738v60v42p4v1939amo9abhc8.jpg"
+                    features={['Analytics', 'Reports', 'Alerts']}
                 />
             </div>
             
@@ -129,36 +128,72 @@ export default function Home() {
          </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="container mx-auto px-4">
-        <div className="bg-slate-900 rounded-2xl p-8 md:p-16 text-white overflow-hidden relative">
-             {/* Abstract Shapes */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      {/* Solutions / Sectors */}
+      <section id="sectors" className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">Solutions by Sector</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Tailored environmental monitoring solutions for diverse applications.</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <SectorCard 
+                icon={<Cloud className="h-8 w-8 text-white" />}
+                title="Urban Air Quality"
+                description="Smart cities, campuses, and airports."
+                color="bg-blue-500"
+            />
+            <SectorCard 
+                icon={<Wind className="h-8 w-8 text-white" />}
+                title="Odour Monitoring"
+                description="WWTP, landfills, and industries."
+                color="bg-green-500"
+            />
+            <SectorCard 
+                icon={<Factory className="h-8 w-8 text-white" />}
+                title="Industrial"
+                description="EHS, process control, and compliance."
+                color="bg-orange-500"
+            />
+            <SectorCard 
+                icon={<BarChart3 className="h-8 w-8 text-white" />}
+                title="Research"
+                description="Environmental impact assessments and studies."
+                color="bg-purple-500"
+            />
+        </div>
+      </section>
 
-            <div className="grid md:grid-cols-2 gap-12 relative z-10 items-center">
-                <div>
-                    <h2 className="text-3xl font-bold mb-6">Why Choose Oizom Technology?</h2>
-                    <div className="space-y-6">
-                        <FeatureItem 
-                            title="Patent Pending Technology"
-                            desc="Proprietary 'e-breathing' technology for higher data accuracy and longer sensor life."
-                        />
-                        <FeatureItem 
-                            title="Ultimate Durability"
-                            desc="Built with high-grade engineering metal and composite polymers to withstand harsh outdoor conditions."
-                        />
-                         <FeatureItem 
-                            title="Retrofit Design"
-                            desc="Easy plug-and-play implementation on existing infrastructure like poles and walls."
-                        />
+      {/* Case Studies */}
+      <section className="bg-white py-16 border-t border-slate-100">
+        <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-12 text-center">Success Stories</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+                <div className="group relative overflow-hidden rounded-2xl bg-slate-100 h-[400px] shadow-sm hover:shadow-xl transition-all">
+                    <img 
+                        src="https://oizom.com/wp-content/uploads/2025/07/DFPCL-Monitors-NH₃-and-Noise-Levels-at-Taloja-Plant-with-Oizoms-AQBot-1024x1024.webp" 
+                        alt="DFPCL Case Study"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <div className="absolute bottom-0 p-8 text-white">
+                        <div className="mb-2 text-sm font-semibold text-blue-400">Industrial EHS</div>
+                        <h3 className="text-2xl font-bold mb-2">DFPCL Monitors NH3 and Noise at Taloja Plant</h3>
+                        <p className="text-slate-300 line-clamp-2">Deepak Fertilisers uses AQBot to ensure safety and compliance in their chemical plant.</p>
+                        <Link href="/case-studies/dfpcl" className="mt-4 inline-flex items-center text-white hover:underline">Read Case Study <ArrowRight className="ml-2 h-4 w-4"/></Link>
                     </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 h-full flex items-center justify-center min-h-[300px]">
-                    <div className="text-center">
-                        <BarChart3 className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                        <h3 className="text-xl font-semibold mb-2">Actionable Insights</h3>
-                        <p className="text-slate-300 text-sm">Visualize data, generate reports, and receive alerts via our Environmental AI platform.</p>
+                <div className="group relative overflow-hidden rounded-2xl bg-slate-100 h-[400px] shadow-sm hover:shadow-xl transition-all">
+                    <img 
+                        src="https://oizom.com/wp-content/uploads/2025/09/Real-time-Dust-Monitoring-at-Raj-Transit-Infra-Projects-1024x1024.webp" 
+                        alt="Raj Transit Infra Case Study"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <div className="absolute bottom-0 p-8 text-white">
+                        <div className="mb-2 text-sm font-semibold text-orange-400">Construction</div>
+                        <h3 className="text-2xl font-bold mb-2">Real-time Dust Monitoring at Raj Transit Infra</h3>
+                        <p className="text-slate-300 line-clamp-2">Ensuring regulatory compliance and avoiding penalties with AQBot PM monitoring.</p>
+                        <Link href="/case-studies/raj-transit" className="mt-4 inline-flex items-center text-white hover:underline">Read Case Study <ArrowRight className="ml-2 h-4 w-4"/></Link>
                     </div>
                 </div>
             </div>
@@ -166,13 +201,16 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="container mx-auto px-4 text-center py-12">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">Ready to implement Environmental IoT?</h2>
-        <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">Join smart cities and industries worldwide in making data-driven environmental decisions.</p>
-        <div className="flex justify-center gap-4">
-             <button className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700">
-              Get a Quote
-            </button>
+      <section id="contact" className="container mx-auto px-4 text-center py-12 bg-blue-600 rounded-3xl text-white mb-8">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Partner with us for a sustainable future</h2>
+        <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">Join our global network of partners and distributors to bring accurate air quality data to your region.</p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+             <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-blue-600 shadow transition-colors hover:bg-slate-100">
+              Get in Touch
+            </Link>
+             <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-md border border-white bg-transparent px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700">
+              Learn About EnviroLko
+            </Link>
         </div>
       </section>
 
@@ -180,56 +218,40 @@ export default function Home() {
   );
 }
 
-// Simple Components for this page
-function Card({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-    return (
-        <div className="group rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-blue-200">
-            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 group-hover:bg-blue-50 transition-colors">
-                {icon}
-            </div>
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
-            <p className="text-slate-500 leading-relaxed">{description}</p>
-        </div>
-    )
-}
-
-function ProductCard({ name, description, features, tag }: { name: string, description: string, features: string[], tag?: string }) {
+// Components
+function ProductCard({ name, description, features, tag, image }: { name: string, description: string, features: string[], tag?: string, image: string }) {
     return (
         <div className="flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-all hover:shadow-lg">
-            <div className="h-48 bg-slate-100 flex items-center justify-center relative">
-                {tag && <span className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">{tag}</span>}
-                <div className="w-24 h-24 bg-slate-300 rounded-md flex items-center justify-center text-slate-500 text-sm">Product Img</div>
+            <div className="h-56 bg-slate-100 flex items-center justify-center relative overflow-hidden">
+                {tag && <span className="absolute top-4 right-4 bg-slate-900/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full z-10">{tag}</span>}
+                <img src={image} alt={name} className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
             </div>
             <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{name}</h3>
-                <p className="text-sm text-slate-500 mb-4 flex-1">{description}</p>
+                <p className="text-sm text-slate-500 mb-4 flex-1 leading-relaxed">{description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                     {features.map(f => (
-                        <span key={f} className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-800">
+                        <span key={f} className="inline-flex items-center rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600 border border-slate-200">
                             {f}
                         </span>
                     ))}
                 </div>
-                <button className="w-full inline-flex h-10 items-center justify-center rounded-md border border-slate-200 bg-white px-4 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950">
+                <Link href={`/products#${name.toLowerCase()}`} className="w-full inline-flex h-10 items-center justify-center rounded-md border border-slate-200 bg-white px-4 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950">
                     View Specs
-                </button>
+                </Link>
             </div>
         </div>
     )
 }
 
-function FeatureItem({ title, desc }: { title: string, desc: string }) {
+function SectorCard({ icon, title, description, color }: { icon: React.ReactNode, title: string, description: string, color: string }) {
     return (
-        <div className="flex gap-4">
-            <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
-                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                </svg>
+        <Link href={`/sectors/${title.split(' ')[0].toLowerCase()}`} className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-blue-200 flex flex-col items-center text-center">
+            <div className={`mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full ${color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                {icon}
             </div>
-            <div>
-                <h4 className="font-semibold text-white">{title}</h4>
-                <p className="text-sm text-slate-300">{desc}</p>
-            </div>
-        </div>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{title}</h3>
+            <p className="text-slate-500 text-sm">{description}</p>
+        </Link>
     )
 }
