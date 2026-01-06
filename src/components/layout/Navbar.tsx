@@ -121,18 +121,18 @@ export function Navbar() {
                 </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                <Link href="/case-studies" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Case Studies
-                    </NavigationMenuLink>
-                </Link>
+                  <NavigationMenuLink asChild>
+                    <Link href="/case-studies" className={navigationMenuTriggerStyle()}>
+                      Case Studies
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                <Link href="/resources" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Resources
-                    </NavigationMenuLink>
-                </Link>
+                  <NavigationMenuLink asChild>
+                    <Link href="/resources" className={navigationMenuTriggerStyle()}>
+                      Resources
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>
             </NavigationMenu>
