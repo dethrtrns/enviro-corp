@@ -169,10 +169,10 @@ export default function Home() {
         id="sectors"
         className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
             Solutions by Sector
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Tailored environmental monitoring solutions for diverse
             applications.
           </p>
